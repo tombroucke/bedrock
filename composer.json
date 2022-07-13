@@ -68,14 +68,14 @@
     "wpackagist-plugin/wordpress-seo": "^19.3",
     "wpackagist-plugin/worker": "^4.9",
     "wpackagist-plugin/wp-mail-smtp": "^3.4",
-    "wpackagist-plugin/wp-migrate-db": "^2.3",
-    "tombroucke/otomaties-deployer": "^1.0"
+    "wpackagist-plugin/wp-migrate-db": "^2.3"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
     "roave/security-advisories": "dev-latest",
     "tombroucke/sage-bootstrap-components": "^4.0",
-    "tombroucke/otomaties-sage-helper": "^2.1"
+    "tombroucke/otomaties-sage-helper": "^2.1",
+    "tombroucke/otomaties-deployer": "^1.0"
   },
   "config": {
     "optimize-autoloader": true,
