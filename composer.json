@@ -74,7 +74,7 @@
     "squizlabs/php_codesniffer": "^3.7.1",
     "roave/security-advisories": "dev-latest",
     "tombroucke/sage-bootstrap-components": "^4.0",
-    "tombroucke/otomaties-sage-helper": "^2.1",
+    "tombroucke/otomaties-sage-helper": "dev-master",
     "tombroucke/otomaties-deployer": "^1.0"
   },
   "config": {
