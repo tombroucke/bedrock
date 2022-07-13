@@ -74,7 +74,8 @@
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
     "roave/security-advisories": "dev-latest",
-    "tombroucke/sage-bootstrap-components": "^4.0"
+    "tombroucke/sage-bootstrap-components": "^4.0",
+    "tombroucke/otomaties-sage-helper": "^2.1"
   },
   "config": {
     "optimize-autoloader": true,
