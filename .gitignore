@@ -1,19 +1,32 @@
 # Application
-web/app/plugins/*
-!web/app/plugins/.gitkeep
-web/app/mu-plugins/*/
-web/app/themes/twentytwentytwo/
-web/app/upgrade
-web/app/uploads/*
-!web/app/uploads/.gitkeep
-web/app/cache/*
+www/revision.txt
+www/app/plugins/*
+!www/app/plugins/.gitkeep
+www/app/mu-plugins/*/
+www/app/upgrade
+www/app/uploads/*
+www/app/wflogs/
+www/app/ewww
+www/app/fonts
+!www/app/uploads/.gitkeep
+
+www/app/advanced-cache.php
+www/app/object-cache.php
+www/app/backup-db
+www/app/backups
+www/app/blogs.dir
+www/app/cache
+www/app/wp-cache-config.php
+www/app/wp-rocket-config
+www/app/languages/wpml
 
 # WordPress
-web/wp
-web/.htaccess
+www/wp
+www/.htaccess
 
 # Logs
 *.log
+/log
 
 # Dotenv
 .env
@@ -23,5 +36,25 @@ web/.htaccess
 # Composer
 /vendor
 
+node_modules
+
 # WP-CLI
 wp-cli.local.yml
+
+# System files
+*.DS_Store
+*[Tt]humbs.db
+*.Trashes
+
+#Local
+/sql
+/public
+
+#Wordfence
+www/wordfence-waf.php
+www/.user.ini
+
+# Editor config
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
