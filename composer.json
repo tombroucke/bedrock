@@ -48,7 +48,6 @@
     "blade-ui-kit/blade-icons": "^1.3",
     "filp/whoops": "^2.14",
     "log1x/acf-composer": "^2.0",
-    "log1x/modern-acf-options": "^1.0",
     "log1x/navi": "^2.0",
     "owenvoke/blade-fontawesome": "^1.0",
     "roots/acorn": "^2.1",
