@@ -58,3 +58,6 @@ www/.user.ini
 *.sublime-project
 *.sublime-workspace
 *.code-workspace
+
+# Snyk
+.dccache
