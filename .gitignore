@@ -49,6 +49,8 @@ wp-cli.local.yml
 #Local
 /sql
 /public
+auth.json
+bud.local.config.js
 
 #Wordfence
 www/wordfence-waf.php
