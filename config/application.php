@@ -105,6 +105,18 @@ Config::define('DISALLOW_FILE_MODS', true);
 // Limit the number of post revisions that Wordpress stores (true (default WP): store every revision)
 Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?: true);
 
+$postmarkConfig = [
+    'POSTMARK_API_KEY',
+    'POSTMARK_STREAM_NAME',
+    'POSTMARK_SENDER_ADDRESS',
+    'POSTMARK_FORCE_FROM'
+];
+foreach ($postmarkConfig as $postmarkConfigItem) {
+    if (getenv($postmarkConfigItem)) {
+        Config::define($postmarkConfigItem, getenv($postmarkConfigItem));
+    }
+}
+
 /**
  * Debugging Settings
  */
