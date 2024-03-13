@@ -9,6 +9,7 @@ www/app/wflogs/
 www/app/ewww
 www/app/fonts
 !www/app/uploads/.gitkeep
+!www/app/mu-plugins/functionality-plugin
 
 www/app/advanced-cache.php
 www/app/object-cache.php
@@ -19,6 +20,7 @@ www/app/cache
 www/app/wp-cache-config.php
 www/app/wp-rocket-config
 www/app/languages/wpml
+www/app/mu-plugins/wp-migrate-db-pro-compatibility.php
 
 # WordPress
 www/wp
