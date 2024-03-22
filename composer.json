@@ -65,8 +65,7 @@
     "roots/acorn": "^3.0",
     "blade-ui-kit/blade-icons": "^1.5",
     "owenvoke/blade-fontawesome": "^2.1",
-    "wpackagist-plugin/imagify": "^2.1",
-    "wpackagist-plugin/post-smtp": "^2.6"
+    "wpackagist-plugin/imagify": "^2.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
