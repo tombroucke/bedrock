@@ -36,7 +36,7 @@
     }
   ],
   "require": {
-    "php": ">=7.4",
+    "php": ">=8.2",
     "composer/installers": "^2.1",
     "vlucas/phpdotenv": "^5.4",
     "oscarotero/env": "^2.1",
@@ -45,8 +45,8 @@
     "roots/wordpress": "^6.0",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
-    "log1x/acf-composer": "^2.0",
-    "log1x/navi": "^2.0",
+    "log1x/acf-composer": "^3.0",
+    "log1x/navi": "^3.0",
     "satispress/advanced-custom-fields-pro": "^6.0",
     "satispress/wp-rocket": "^3.11",
     "spatie/laravel-google-fonts": "^1.2",
@@ -59,12 +59,12 @@
     "wpackagist-plugin/redirection": "^5.2",
     "wpackagist-plugin/svg-support": "^2.4",
     "wpackagist-plugin/wordfence": "^7.5",
-    "wpackagist-plugin/wordpress-seo": "^20.0",
+    "wpackagist-plugin/wordpress-seo": "^22.1",
     "wpackagist-plugin/worker": "^4.9",
     "wpackagist-plugin/wp-migrate-db": "^2.3",
-    "roots/acorn": "^3.0",
+    "roots/acorn": "^4.0",
     "blade-ui-kit/blade-icons": "^1.5",
-    "owenvoke/blade-fontawesome": "^2.1",
+    "owenvoke/blade-fontawesome": "^2.6",
     "wpackagist-plugin/imagify": "^2.1"
   },
   "require-dev": {
@@ -72,7 +72,7 @@
     "roave/security-advisories": "dev-latest",
     "tombroucke/otomaties-sage-helper": "dev-master",
     "tombroucke/otomaties-deployer": "^1.0",
-    "spatie/laravel-ignition": "^1.6"
+    "spatie/laravel-ignition": "^2.4",
   },
   "config": {
     "optimize-autoloader": true,
