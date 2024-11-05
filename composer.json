@@ -86,11 +86,11 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "www/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "www/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "www/app/themes/{$name}/": ["type:wordpress-theme"]
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "www/wp"
+    "wordpress-install-dir": "web/wp"
   },
   "scripts": {
     "post-root-package-install": [
