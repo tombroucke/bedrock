@@ -2,6 +2,7 @@
 namespace Deployer;
 
 require_once __DIR__ . '/vendor/autoload.php';
+require 'contrib/cachetool.php';
 
 $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -9,6 +10,7 @@ $dotenv->load();
 require 'vendor/tombroucke/otomaties-deployer/deploy.php';
 
 /** Config */
+set('web_root', 'web');
 set('application', '');
 set('repository', '');
 set('sage/theme_path', get('web_root') . '/app/themes/themename');
@@ -47,7 +49,7 @@ after('deploy:update_code', 'otomaties:write_revision_to_file');
 after('deploy:symlink', 'combell:reloadPHP');
 
 /** Clear OPcode cache */
-after('deploy:symlink', 'combell:reset_opcode_cache');
+after('deploy:symlink', 'cachetool:clear:opcache');
 
 /** Cache ACF fields */
 after('deploy:symlink', 'acorn:acf_cache');
