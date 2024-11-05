@@ -1,30 +1,30 @@
 # Application
-www/revision.txt
-www/app/plugins/*
-!www/app/plugins/.gitkeep
-www/app/mu-plugins/*/
-www/app/upgrade
-www/app/uploads/*
-www/app/wflogs/
-www/app/ewww
-www/app/fonts
-!www/app/uploads/.gitkeep
-!www/app/mu-plugins/functionality-plugin
+web/revision.txt
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/*
+web/app/wflogs/
+web/app/ewww
+web/app/fonts
+!web/app/uploads/.gitkeep
+!web/app/mu-plugins/functionality-plugin
 
-www/app/advanced-cache.php
-www/app/object-cache.php
-www/app/backup-db
-www/app/backups
-www/app/blogs.dir
-www/app/cache
-www/app/wp-cache-config.php
-www/app/wp-rocket-config
-www/app/languages/wpml
-www/app/mu-plugins/wp-migrate-db-pro-compatibility.php
+web/app/advanced-cache.php
+web/app/object-cache.php
+web/app/backup-db
+web/app/backups
+web/app/blogs.dir
+web/app/cache
+web/app/wp-cache-config.php
+web/app/wp-rocket-config
+web/app/languages/wpml
+web/app/mu-plugins/wp-migrate-db-pro-compatibility.php
 
 # WordPress
-www/wp
-www/.htaccess
+web/wp
+web/.htaccess
 
 # Logs
 *.log
@@ -55,8 +55,8 @@ auth.json
 bud.local.config.js
 
 #Wordfence
-www/wordfence-waf.php
-www/.user.ini
+web/wordfence-waf.php
+web/.user.ini
 
 # Editor config
 *.sublime-project
