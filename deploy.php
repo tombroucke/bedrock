@@ -49,7 +49,7 @@ after('deploy:update_code', 'otomaties:write_revision_to_file');
 after('deploy:symlink', 'combell:reloadPHP');
 
 /** Clear OPcode cache */
-after('deploy:symlink', 'cachetool:clear:opcache');
+after('deploy:symlink', 'combell:reset_opcode_cache');
 
 /** Cache ACF fields */
 after('deploy:symlink', 'acorn:acf_cache');
