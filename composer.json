@@ -49,7 +49,6 @@
     "log1x/navi": "^3.0",
     "otomaties-plugin/advanced-custom-fields-pro": "^6.0",
     "otomaties-plugin/wp-rocket": "^3.11",
-    "spatie/laravel-google-fonts": "^1.2",
     "spatie/ray": "^1.34",
     "tombroucke/acf-objects": "^4.0",
     "tombroucke/otomaties-cookie-consent": "^1.0",
