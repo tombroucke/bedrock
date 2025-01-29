@@ -60,7 +60,6 @@
     "wpackagist-plugin/wordfence": "^7.5",
     "wpackagist-plugin/wordpress-seo": "^22.1",
     "wpackagist-plugin/worker": "^4.9",
-    "wpackagist-plugin/wp-migrate-db": "^2.3",
     "roots/acorn": "^4.0",
     "blade-ui-kit/blade-icons": "^1.5",
     "owenvoke/blade-fontawesome": "^2.6",
