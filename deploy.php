@@ -54,6 +54,9 @@ after('deploy:symlink', 'combell:reset_opcode_cache');
 /** Cache ACF fields */
 after('deploy:symlink', 'acorn:acf_cache');
 
+/** Optimize acorn */
+after('deploy:symlink', 'acorn:optimize');
+
 /** Reload cache & preload */
 after('deploy:symlink', 'wp_rocket:clear_cache');
 
