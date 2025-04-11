@@ -1,0 +1,23 @@
+{
+    "preset": "laravel",
+    "exclude": [
+		"web/app/cache",
+		"web/app/languages",
+		"web/app/mu-plugins/bedrock-disallow-indexing",
+		"web/app/mu-plugins/otomaties-core",
+		"web/app/plugins",
+		"web/app/uploads",
+		"web/app/wflogs",
+        "web/wp"
+    ],
+    "notPath": [
+		"web/app/mu-plugins/bedrock-autoloader.php",
+		"web/app/mu-plugins/disallow-indexing.php",
+		"web/app/mu-plugins/register-theme-directory.php"
+    ],
+    "rules": {
+        "concat_space": {
+            "spacing": "one"
+        }
+    }
+}
