@@ -87,7 +87,13 @@
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "web/wp"
+    "wordpress-install-dir": "web/wp",
+    "acorn": {
+      "aliases": {
+        "Post": "App\\Facades\\Post",
+        "ThemeJson": "App\\Facades\\ThemeJson"
+      }
+    }
   },
   "scripts": {
     "post-root-package-install": [
