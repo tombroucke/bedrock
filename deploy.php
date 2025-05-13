@@ -14,7 +14,7 @@ set('web_root', 'web');
 set('application', '');
 set('repository', '');
 set('sage/theme_path', get('web_root') . '/app/themes/themename');
-set('sage/build_command', 'build --clean --flush'); // build --clean for bud, build:production for mix
+set('sage/build_command', 'build'); // build --clean for bud, build:production for mix
 
 /** Hosts */
 host('production')
