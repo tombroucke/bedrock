@@ -1,20 +1,41 @@
 <?php
 namespace Deployer;
 
+use Illuminate\Support\Arr;
+use function Otomaties\Deployer\runWpQuery;
+
 require_once __DIR__ . '/vendor/autoload.php';
-require 'contrib/cachetool.php';
+require_once 'contrib/cachetool.php';
+require_once 'recipe/composer.php';
 
-$dotenv = \Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+(\Dotenv\Dotenv::createImmutable(__DIR__))
+    ->load();
 
-require 'vendor/tombroucke/otomaties-deployer/deploy.php';
+collect([
+    'functions.php',
+    'recipes/auth.php',
+    'recipes/bedrock.php',
+    'recipes/combell.php',
+    'recipes/composer.php',
+    'recipes/database.php',
+    'recipes/htaccess.php',
+    'recipes/opcode.php',
+    'recipes/otomaties.php',
+    'recipes/sage.php',
+    'recipes/wordfence.php',
+    'recipes/wp.php',
+])
+    ->map(fn ($file) => __DIR__ . '/vendor/tombroucke/otomaties-deployer/' . $file)
+    ->filter(fn ($file) => file_exists($file))
+    ->each(fn ($file) => require_once $file);
 
 /** Config */
-set('web_root', 'web');
 set('application', '');
 set('repository', '');
-set('sage/theme_path', get('web_root') . '/app/themes/themename');
-set('sage/build_command', 'build'); // build --clean for bud, build:production for mix
+
+/** Sage */
+set('sage/theme_path', '/app/themes/themename');
+set('sage/build_command', 'build');
 
 /** Hosts */
 host('production')
@@ -33,8 +54,14 @@ host('staging')
     ->set('branch', 'staging')
     ->set('deploy_path', '/data/sites/web/examplebe/app/staging');
 
-/** Notify deploy started */
-before('deploy', 'slack:notify');
+/** Check if everything is set for sage */
+before('deploy:prepare', 'sage:check');
+
+/** Upload auth.json */
+before('deploy:vendors', 'composer:upload_auth_json');
+
+/** Remove auth.json */
+after('deploy:vendors', 'composer:remove_auth_json');
 
 /** Install theme dependencies */
 after('deploy:vendors', 'sage:vendors');
@@ -51,26 +78,22 @@ after('deploy:symlink', 'combell:reloadPHP');
 /** Clear OPcode cache */
 after('deploy:symlink', 'combell:reset_opcode_cache');
 
-/** Cache ACF fields */
-after('deploy:symlink', 'acorn:acf_cache');
+/** Optimize the site */
+desc('Optimize the site');
+task('otomaties:custom:optimize', function () {
+    $commands = [
+        'wp acorn acf:cache',
+        'wp acorn optimize',
+        'wp rocket regenerate --file=advanced-cache',
+        'wp rocket clean --confirm',
+        'wp rocket preload',
+    ];
 
-/** Optimize acorn */
-after('deploy:symlink', 'acorn:optimize');
-
-/** Reload cache & preload */
-after('deploy:symlink', 'wp_rocket:clear_cache');
-
-/** Reload cache & preload */
-after('deploy:symlink', 'wp_rocket:preload_cache');
+    runWpQuery(Arr::join($commands, ' && '));
+});
 
 /** Remove unused themes */
 after('deploy:cleanup', 'cleanup:unused_themes');
 
-/** Notify success */
-after('deploy:success', 'slack:notify:success');
-
 /** Unlock deploy */
 after('deploy:failed', 'deploy:unlock');
-
-/** Notify failure */
-after('deploy:failed', 'slack:notify:failure');
