@@ -93,7 +93,7 @@ task('otomaties:custom:optimize', function () {
 });
 
 /** Remove unused themes */
-after('deploy:cleanup', 'cleanup:unused_themes');
+after('deploy:cleanup', 'wp:remove_unused_themes');
 
 /** Unlock deploy */
 after('deploy:failed', 'deploy:unlock');
