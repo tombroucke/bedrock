@@ -82,11 +82,10 @@ after('deploy:symlink', 'combell:reset_opcode_cache');
 desc('Optimize the site');
 task('otomaties:custom:optimize', function () {
     $commands = [
+        'wp core update-db',
         'wp acorn acf:cache',
         'wp acorn optimize',
-        'wp rocket regenerate --file=advanced-cache',
-        'wp rocket clean --confirm',
-        'wp rocket preload',
+        'wp cfcache purge_cache',
     ];
 
     runWpQuery(Arr::join($commands, ' && '));
