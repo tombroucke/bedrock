@@ -79,6 +79,9 @@ after('deploy:symlink', 'combell:reloadPHP');
 after('deploy:symlink', 'combell:reset_opcode_cache');
 
 /** Optimize the site */
+after('deploy:symlink', 'otomaties:custom:optimize');
+
+/** Optimize the site */
 desc('Optimize the site');
 task('otomaties:custom:optimize', function () {
     $commands = [
