@@ -19,7 +19,7 @@ web/app/blogs.dir
 web/app/cache
 web/app/wp-cache-config.php
 web/app/wp-rocket-config
-web/app/languages/wpml
+web/app/languages
 web/app/mu-plugins/wp-migrate-db-pro-compatibility.php
 
 # WordPress
