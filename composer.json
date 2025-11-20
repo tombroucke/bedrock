@@ -107,6 +107,14 @@
     ],
     "post-autoload-dump": [
       "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
+    ],
+    "post-install-cmd": [
+      "wp language core install nl_NL || true",
+      "wp language plugin install --all nl_NL || true"
+    ],
+    "post-update-cmd": [
+      "wp language core update || true",
+      "wp language plugin update --all || true"
     ]
   }
 }
