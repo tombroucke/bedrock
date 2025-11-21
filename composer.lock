@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b470abe3e2d3fe4bbae25a02427e7a48",
+    "content-hash": "edbfca9db5781b0303b6a8c6d23b2d99",
     "packages": [
         {
             "name": "blade-ui-kit/blade-icons",
@@ -7496,15 +7496,15 @@
         },
         {
             "name": "wpackagist-plugin/worker",
-            "version": "4.9.20",
+            "version": "4.9.25",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/worker/",
-                "reference": "tags/4.9.20"
+                "reference": "tags/4.9.25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/worker.4.9.20.zip"
+                "url": "https://downloads.wordpress.org/plugin/worker.4.9.25.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
