@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b470abe3e2d3fe4bbae25a02427e7a48",
+    "content-hash": "edbfca9db5781b0303b6a8c6d23b2d99",
     "packages": [
         {
             "name": "blade-ui-kit/blade-icons",
@@ -7424,15 +7424,15 @@
         },
         {
             "name": "wpackagist-plugin/imagify",
-            "version": "2.2.5",
+            "version": "2.2.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/imagify/",
-                "reference": "tags/2.2.5"
+                "reference": "tags/2.2.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/imagify.2.2.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/imagify.2.2.6.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
