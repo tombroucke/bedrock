@@ -86,7 +86,6 @@ desc('Optimize the site');
 task('otomaties:custom:optimize', function () {
     $commands = [
         'wp core update-db',
-        'wp acorn acf:cache',
         'wp acorn optimize',
         'wp cfcache purge_cache || true',
     ];
