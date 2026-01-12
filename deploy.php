@@ -40,14 +40,14 @@ set('sage/build_command', 'build');
 /** Hosts */
 host('production')
     ->set('hostname', 'ssh###.webhosting.be')
-    ->set('url', '')
+    ->set('url', 'https://example.be')
     ->set('remote_user', 'examplebe')
     ->set('branch', 'main')
     ->set('deploy_path', '/data/sites/web/examplebe/app/main');
 
 host('staging')
     ->set('hostname', 'ssh###.webhosting.be')
-    ->set('url', '')
+    ->set('url', 'https://staging.example.be')
     ->set('basic_auth_user', $_SERVER['BASIC_AUTH_USER'] ?? '')
     ->set('basic_auth_pass', $_SERVER['BASIC_AUTH_PASS'] ?? '')
     ->set('remote_user', 'examplebe')

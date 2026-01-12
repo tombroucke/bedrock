@@ -38,8 +38,6 @@ web/.htaccess
 # Composer
 /vendor
 
-node_modules
-
 # WP-CLI
 wp-cli.local.yml
 
@@ -65,3 +63,11 @@ web/.user.ini
 
 # Snyk
 .dccache
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

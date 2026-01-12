@@ -1,0 +1,15 @@
+{
+  "name": "bedrock",
+  "version": "1.0.0",
+  "description": "WordPress boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "author": "Tom Broucke",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.5"
+  }
+}
