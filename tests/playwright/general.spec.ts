@@ -7,6 +7,7 @@ test('no console errors on page load', async ({ page }) => {
 
 	const consoleMessages: string[] = [];
 	const pageErrors: string[] = [];
+	const resourceErrors: string[] = [];
 
 	const ignorePatterns = [
 		/Failed to load resource.*ERR_CERT_COMMON_NAME_INVALID/,
@@ -34,12 +35,42 @@ test('no console errors on page load', async ({ page }) => {
 		}
 	});
 
+	// Listen for failed resource loads (404s, 500s, etc.)
+	page.on('response', response => {
+		const status = response.status();
+		// Only catch actual errors (4xx, 5xx), not redirects (3xx) or success (2xx)
+		if (status >= 400) {
+			const url = response.url();
+			const message = `${status} ${response.statusText()} - ${url}`;
+			if (!shouldIgnoreError(message)) {
+				resourceErrors.push(message);
+			}
+		}
+	});
+
 	await page.goto('/');
 
+	// Scroll through the page to trigger lazy-loaded images
+	await page.evaluate(async () => {
+		const scrollHeight = document.documentElement.scrollHeight;
+		const viewportHeight = window.innerHeight;
+		const scrollStep = viewportHeight;
+
+		for (let position = 0; position < scrollHeight; position += scrollStep) {
+			window.scrollTo(0, position);
+			await new Promise(resolve => setTimeout(resolve, 300));
+		}
+
+		// Scroll back to top
+		window.scrollTo(0, 0);
+	});
+
+	// Wait for any lazy-loaded resources to finish loading
 	await page.waitForTimeout(1000);
 
 	expect(pageErrors, `Page errors found: ${pageErrors.join(', ')}`).toHaveLength(0);
 	expect(consoleMessages, `Console errors found: ${consoleMessages.join(', ')}`).toHaveLength(0);
+	expect(resourceErrors, `Resource errors found: ${resourceErrors.join(', ')}`).toHaveLength(0);
 });
 
 test('GTM is correctly installed', async ({ page }) => {
