@@ -17,7 +17,12 @@
     }
   ],
   "keywords": [
-    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
+    "bedrock",
+    "composer",
+    "roots",
+    "wordpress",
+    "wp",
+    "wp-config"
   ],
   "support": {
     "issues": "https://github.com/roots/bedrock/issues",
@@ -27,12 +32,17 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org",
-      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+      "only": [
+        "wpackagist-plugin/*",
+        "wpackagist-theme/*"
+      ]
     },
     {
-        "type": "composer",
-        "url": "https://otomaties.private-packages.com",
-        "only": ["otomaties-plugin/*"]
+      "type": "composer",
+      "url": "https://otomaties.private-packages.com",
+      "only": [
+        "otomaties-plugin/*"
+      ]
     }
   ],
   "require": {
@@ -82,9 +92,15 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "web/app/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "web/app/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
     },
     "wordpress-install-dir": "web/wp",
     "acorn": {
@@ -106,14 +122,6 @@
     ],
     "post-autoload-dump": [
       "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
-    ],
-    "post-install-cmd": [
-      "wp language core install nl_NL || true",
-      "wp language plugin install --all nl_NL || true"
-    ],
-    "post-update-cmd": [
-      "wp language core update || true",
-      "wp language plugin update --all || true"
     ]
   }
 }

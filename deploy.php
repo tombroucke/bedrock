@@ -1,7 +1,6 @@
 <?php
 namespace Deployer;
 
-use Illuminate\Support\Arr;
 use function Otomaties\Deployer\runWpQuery;
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -84,13 +83,16 @@ after('deploy:symlink', 'otomaties:custom:optimize');
 /** Optimize the site */
 desc('Optimize the site');
 task('otomaties:custom:optimize', function () {
-    $commands = [
+    $languages = implode(' ', [
+        'nl_NL',
+    ]);
+
+    runWpQuery([
+        'wp language core install ' . $languages . ' & wp language plugin install --all ' . $languages . ' & wait',
         'wp core update-db',
         'wp acorn optimize',
-        'wp cfcache purge_cache || true',
-    ];
-
-    runWpQuery(Arr::join($commands, ' && '));
+        'wp cfcache purge_cache',
+    ]);
 });
 
 /** Remove unused themes */
