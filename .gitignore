@@ -10,6 +10,7 @@ web/app/ewww
 web/app/fonts
 !web/app/uploads/.gitkeep
 !web/app/mu-plugins/functionality-plugin
+web/app/wp-cloudflare-super-page-cache/
 
 web/app/advanced-cache.php
 web/app/object-cache.php
