@@ -56,9 +56,6 @@ host('staging')
 /** Check if everything is set for sage */
 before('deploy:prepare', 'sage:check');
 
-/** Install theme dependencies */
-before('deploy:vendors', 'sage:vendors');
-
 /** Upload auth.json */
 before('deploy:vendors', 'composer:upload_auth_json');
 
