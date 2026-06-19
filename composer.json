@@ -67,7 +67,8 @@
     "wp-plugin/wordfence": "^8.0",
     "wp-plugin/wordpress-seo": "^27.8",
     "wp-plugin/worker": "^4.9",
-    "owenvoke/blade-fontawesome": "^3.2"
+    "owenvoke/blade-fontawesome": "^3.2",
+    "tombroucke/wp-fluent-hooks": "^1.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",

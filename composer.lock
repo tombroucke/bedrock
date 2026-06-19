@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "48aab2e774f96adf9d7baf724d42da9e",
+    "content-hash": "a13f96e5aa7641dd2a946005ce824e91",
     "packages": [
         {
             "name": "blade-ui-kit/blade-icons",
@@ -7687,6 +7687,50 @@
                 "source": "https://github.com/tombroucke/otomaties-core/tree/2.2.1"
             },
             "time": "2026-06-05T13:00:43+00:00"
+        },
+        {
+            "name": "tombroucke/wp-fluent-hooks",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tombroucke/wp-fluent-hooks.git",
+                "reference": "e1b054b21f0d9f769eb69edf8320d9ecdd351bb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tombroucke/wp-fluent-hooks/zipball/e1b054b21f0d9f769eb69edf8320d9ecdd351bb8",
+                "reference": "e1b054b21f0d9f769eb69edf8320d9ecdd351bb8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "brain/monkey": "^2.7",
+                "laravel/pint": "^1.29",
+                "pestphp/pest": "^4.6",
+                "phpstan/phpstan": "^2.1",
+                "szepeviktor/phpstan-wordpress": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Otomaties\\WpFluentHooks\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Tom Broucke",
+                    "email": "tom@tombroucke.be"
+                }
+            ],
+            "description": "A small utility package that provides a modern, fluent interface for adding WordPress action and filter hooks. Chain methods to build your hooks in a more expressive and readable way.",
+            "support": {
+                "issues": "https://github.com/tombroucke/wp-fluent-hooks/issues",
+                "source": "https://github.com/tombroucke/wp-fluent-hooks/tree/1.0.0"
+            },
+            "time": "2026-06-19T08:00:04+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
