@@ -1,3 +1,17 @@
 path: web/wp
 server:
   docroot: web
+disabled_commands:
+  - eval
+  - eval-file
+  - shell
+  - db drop
+  - db reset
+  - db import
+  - core install
+  - core update
+  - core multisite-convert
+  - plugin install
+  - plugin delete
+  - theme install
+  - theme delete
