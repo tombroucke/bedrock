@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(xargs cat:*)",
+      "Bash(grep -r 'text.domain\\\\|Text Domain' /Users/tombroucke/Valet/project-name/web/app/themes/project-name/*.css)",
+      "Bash(wp i18n:*)",
+      "Bash(grep -v '^--$')"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
