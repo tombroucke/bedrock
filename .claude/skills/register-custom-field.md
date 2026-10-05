@@ -11,43 +11,6 @@ description: Register a custom field like post meta, user meta, ...
 
 Before adding a new field file, make sure there is no related file where we can append this field
 
-# Acf Objects
+# Retrieving field values
 
-The theme relies heavily on Advanced Custom Fields. For some fields, we want to rely on `AcfObjects::getField()` (tombroucke/acf-objects) instead of the built-in `get_field()` method:
-
-- Image field
-- Repeater field
-- Group field
-
-This gives us easier output like:
-
-```blade
-@foreach (AcfObjects::getField('gallery') as $image)
-  <a href="{{ $image->url('large') }}">
-    {!! $image->image('medium') !!}
-  </a>
-@endforeach
-```
-
-```blade
-@unless(AcfObjects::getField('repeater')->isEmpty())
-<ul>
-  @foreach(AcfObjects::getField('repeater') as $item)
-    <li>{!! $item['name'] !!}</li>
-  @endforeach
-</ul>
-@endunless
-```
-
-```php
-  $settings = AcfObjects::getField('settings')
-    ->default([
-      'foo' => 'bar'
-    ]);
-
-  echo $settings->get('foo');
-```
-
-```blade
-{{ AcfObjects::getField('settings')->get('name') }}
-```
+See `.claude/skills/acf-objects.md` for how to define and retrieve ACF field values using AcfObjects.
